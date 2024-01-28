@@ -1,6 +1,8 @@
 
 import user from '../mock/user.json';
+import data from '../mock/data.json';
 import Profile from './Profile';
+import Statistics from 'components/Statistics';
 
 export const App = () => {
   return (
@@ -24,7 +26,16 @@ export const App = () => {
   location={user.location}
   avatar={user.avatar}
   stats={user.stats}
-/>
+      />
+      
+
+      <Statistics
+        title="Upload stats"
+        data={data}
+      />
+
+
+
 
 
     </div>
