@@ -5,17 +5,15 @@ import friend from '../mock/friends.json'
 import Profile from './Profile';
 import Statistics from 'components/Statistics';
 import FriendList from './FriendList/FriendList';
-import styled from 'styled-components';
+import Transactions from '../mock/transactions.json';
+import TransactionHistory from './TransactionHistory';
 
-const AppContainer = styled.div`
-  height: 100vh;
-  overflow-y: auto; /* Agrega un scroll vertical cuando el contenido excede la altura de la ventana */
-`;
+
 
 export const App = () => {
   return (
-     <AppContainer
-    
+     
+    <div
       style={{
         height: '100vh',
         display: 'flex',
@@ -47,9 +45,9 @@ export const App = () => {
     friend ={friend}  
   />
 
-      
+     <TransactionHistory items={Transactions} />; 
 
-    </AppContainer>
+    </div>
   );
 };
 
