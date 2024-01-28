@@ -1,12 +1,21 @@
 
 import user from '../mock/user.json';
 import data from '../mock/data.json';
+import friend from '../mock/friends.json'
 import Profile from './Profile';
 import Statistics from 'components/Statistics';
+import FriendList from './FriendList/FriendList';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  height: 100vh;
+  overflow-y: auto; /* Agrega un scroll vertical cuando el contenido excede la altura de la ventana */
+`;
 
 export const App = () => {
   return (
-    <div
+     <AppContainer
+    
       style={{
         height: '100vh',
         display: 'flex',
@@ -29,16 +38,18 @@ export const App = () => {
       />
       
 
-      <Statistics
-        title="Upload stats j"
-        data={data}
+  <Statistics
+    title="Upload stats"
+    data={data}
       />
+      
+  <FriendList
+    friend ={friend}  
+  />
 
+      
 
-
-
-
-    </div>
+    </AppContainer>
   );
 };
 
