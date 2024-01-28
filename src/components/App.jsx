@@ -1,5 +1,6 @@
-import Profile from './Profile';
+
 import user from '../mock/user.json';
+import Profile from './Profile';
 
 export const App = () => {
   return (
@@ -17,7 +18,7 @@ export const App = () => {
      
 
 
-<Profile
+<Profile // aca invoco mi componente Profile y le envio los props (username, tag, loaction, avatar, stats)
   username={user.username}
   tag={user.tag}
   location={user.location}
